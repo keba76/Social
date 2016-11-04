@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNi-rp-wQM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNi-rp-wQM" customClass="DesignHeader" customModule="Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Some-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dYD-Zs-rZl">
@@ -68,38 +68,38 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87101293103448274" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTi-Mg-sqU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTi-Mg-sqU" customClass="DesignButtonF" customModule="Social" customModuleProvider="target">
                                 <rect key="frame" x="108.5" y="176" width="103" height="103"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="103" id="Mkq-kZ-LWx"/>
                                     <constraint firstAttribute="height" constant="103" id="mhh-1O-aSB"/>
                                 </constraints>
-                                <state key="normal" image="F_icon.svg"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jnh-RU-wkz">
-                                <rect key="frame" x="61" y="342" width="198" height="106"/>
+                                <rect key="frame" x="61" y="342" width="198" height="94"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aG8-pa-bxv">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aG8-pa-bxv" customClass="DesignField" customModule="Social" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87941810344827587" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYc-TY-oTw">
-                                        <rect key="frame" x="0.0" y="38" width="198" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYc-TY-oTw" customClass="DesignField" customModule="Social" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="32" width="198" height="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87941810340000004" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-HE-T2U">
-                                        <rect key="frame" x="0.0" y="76" width="198" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-HE-T2U" customClass="DesignButtonS" customModule="Social" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="198" height="30"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.85490196078431369" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Sign in"/>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tNi-rp-wQM" secondAttribute="trailing" id="2TS-mx-L3i"/>
                             <constraint firstItem="FxY-T3-ZsJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="788-Kr-qfy"/>
@@ -125,7 +125,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="F_icon.svg" width="500" height="500"/>
         <image name="Some-Logo" width="466" height="102"/>
     </resources>
 </document>
