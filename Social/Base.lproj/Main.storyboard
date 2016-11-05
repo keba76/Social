@@ -92,12 +92,15 @@
                                         <rect key="frame" x="0.0" y="32" width="198" height="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87941810340000004" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-HE-T2U" customClass="DesignButtonS" customModule="Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="198" height="30"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.85490196078431369" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Sign in"/>
+                                        <connections>
+                                            <action selector="SignInTopped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRK-5X-MEW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -121,10 +124,46 @@
                             <constraint firstItem="jnh-RU-wkz" firstAttribute="top" secondItem="DTi-Mg-sqU" secondAttribute="bottom" constant="63" id="zVc-oS-vaq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="aG8-pa-bxv" id="IjU-yd-mS3"/>
+                        <outlet property="passwordField" destination="HYc-TY-oTw" id="x8I-YO-pAD"/>
+                        <segue destination="2S2-Ev-ANs" kind="show" identifier="goToFeed" id="Rwh-f4-o2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31.875" y="53.87323943661972"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="VGG-oT-oUw">
+            <objects>
+                <viewController id="2S2-Ev-ANs" customClass="FeedVC" customModule="Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JlU-Pg-ejW"/>
+                        <viewControllerLayoutGuide type="bottom" id="yfR-9L-AJY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nJH-tv-zkG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgh-9W-3AW">
+                                <rect key="frame" x="132" y="269" width="56" height="30"/>
+                                <state key="normal" title="SignOut"/>
+                                <connections>
+                                    <action selector="signOut:" destination="2S2-Ev-ANs" eventType="touchUpInside" id="u1q-2k-t9T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.49803921569999998" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pgh-9W-3AW" firstAttribute="centerY" secondItem="nJH-tv-zkG" secondAttribute="centerY" id="TZ4-p5-VVe"/>
+                            <constraint firstItem="Pgh-9W-3AW" firstAttribute="centerX" secondItem="nJH-tv-zkG" secondAttribute="centerX" id="feM-pe-aB4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEX-da-zpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="54"/>
         </scene>
     </scenes>
     <resources>
