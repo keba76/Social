@@ -18,6 +18,7 @@
 		5F090E111DCC571600F4B07E /* DesignButtonF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F090E101DCC571600F4B07E /* DesignButtonF.swift */; };
 		5F090E131DCC9A5300F4B07E /* DesignField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F090E121DCC9A5300F4B07E /* DesignField.swift */; };
 		5F090E151DCC9E0700F4B07E /* DesignButtonS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F090E141DCC9E0700F4B07E /* DesignButtonS.swift */; };
+		5F090E171DCCDA6C00F4B07E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F090E161DCCDA6C00F4B07E /* Default-568h@2x.png */; };
 		B00823637C0E6855DBE61970 /* Pods_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC79859D2DF96EFAEC572BC /* Pods_Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		5F090E101DCC571600F4B07E /* DesignButtonF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignButtonF.swift; sourceTree = "<group>"; };
 		5F090E121DCC9A5300F4B07E /* DesignField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignField.swift; sourceTree = "<group>"; };
 		5F090E141DCC9E0700F4B07E /* DesignButtonS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignButtonS.swift; sourceTree = "<group>"; };
+		5F090E161DCCDA6C00F4B07E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5F8653111DCD9A0B0027FB3E /* Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Social.entitlements; sourceTree = "<group>"; };
 		B8967B5B4BFE8FFB13DC6CE3 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		D174CD7473FB4290F0C663FA /* Pods-Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +58,7 @@
 		5F090DE71DCBA66700F4B07E = {
 			isa = PBXGroup;
 			children = (
+				5F090E161DCCDA6C00F4B07E /* Default-568h@2x.png */,
 				5F090DF21DCBA66700F4B07E /* Social */,
 				5F090DF11DCBA66700F4B07E /* Products */,
 				64ACED52DD6A70789593997F /* Pods */,
@@ -73,6 +77,7 @@
 		5F090DF21DCBA66700F4B07E /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				5F8653111DCD9A0B0027FB3E /* Social.entitlements */,
 				5F090E091DCBAC5D00F4B07E /* View */,
 				5F090E081DCBAC5300F4B07E /* Controller */,
 				5F090E071DCBAC4700F4B07E /* Model */,
@@ -175,6 +180,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TJ3RW859P3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -204,6 +214,7 @@
 				5F090DFE1DCBA66700F4B07E /* LaunchScreen.storyboard in Resources */,
 				5F090E061DCBA7A600F4B07E /* GoogleService-Info.plist in Resources */,
 				5F090DFB1DCBA66700F4B07E /* Assets.xcassets in Resources */,
+				5F090E171DCCDA6C00F4B07E /* Default-568h@2x.png in Resources */,
 				5F090DF91DCBA66700F4B07E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +402,7 @@
 			baseConfigurationReference = B8967B5B4BFE8FFB13DC6CE3 /* Pods-Social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Social/Social.entitlements;
 				DEVELOPMENT_TEAM = TJ3RW859P3;
 				INFOPLIST_FILE = Social/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -405,6 +417,7 @@
 			baseConfigurationReference = D174CD7473FB4290F0C663FA /* Pods-Social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Social/Social.entitlements;
 				DEVELOPMENT_TEAM = TJ3RW859P3;
 				INFOPLIST_FILE = Social/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
