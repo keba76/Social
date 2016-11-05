@@ -1,14 +1,14 @@
 //
-//  DesignHeader.swift
+//  DesignImage.swift
 //  Social
 //
-//  Created by Ievgen Keba on 11/4/16.
+//  Created by Ievgen Keba on 11/5/16.
 //  Copyright © 2016 Harman Inc. All rights reserved.
 //
 
 import UIKit
 
-class DesignHeader: UIView {
+class DesignImage: UIImageView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
