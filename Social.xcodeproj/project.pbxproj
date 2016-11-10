@@ -21,6 +21,10 @@
 		5F090E171DCCDA6C00F4B07E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F090E161DCCDA6C00F4B07E /* Default-568h@2x.png */; };
 		5F8653131DCDCEC40027FB3E /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8653121DCDCEC40027FB3E /* FeedVC.swift */; };
 		5F8653151DCE25090027FB3E /* DesignImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8653141DCE25090027FB3E /* DesignImage.swift */; };
+		5FC1CC291DCE68F800C5A7FC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC1CC281DCE68F800C5A7FC /* PostCell.swift */; };
+		5FC1CC2B1DCF3CFA00C5A7FC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC1CC2A1DCF3CFA00C5A7FC /* DataService.swift */; };
+		5FC1CC2D1DCF77F900C5A7FC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC1CC2C1DCF77F900C5A7FC /* Post.swift */; };
+		5FC1CC2F1DD4376E00C5A7FC /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC1CC2E1DD4376E00C5A7FC /* Hashable.swift */; };
 		B00823637C0E6855DBE61970 /* Pods_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC79859D2DF96EFAEC572BC /* Pods_Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		5F8653111DCD9A0B0027FB3E /* Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Social.entitlements; sourceTree = "<group>"; };
 		5F8653121DCDCEC40027FB3E /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		5F8653141DCE25090027FB3E /* DesignImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignImage.swift; sourceTree = "<group>"; };
+		5FC1CC281DCE68F800C5A7FC /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		5FC1CC2A1DCF3CFA00C5A7FC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		5FC1CC2C1DCF77F900C5A7FC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5FC1CC2E1DD4376E00C5A7FC /* Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hashable.swift; sourceTree = "<group>"; };
 		B8967B5B4BFE8FFB13DC6CE3 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		D174CD7473FB4290F0C663FA /* Pods-Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +102,7 @@
 		5F090E071DCBAC4700F4B07E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5FC1CC2C1DCF77F900C5A7FC /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,6 +124,7 @@
 				5F090E121DCC9A5300F4B07E /* DesignField.swift */,
 				5F090E141DCC9E0700F4B07E /* DesignButtonS.swift */,
 				5F8653141DCE25090027FB3E /* DesignImage.swift */,
+				5FC1CC281DCE68F800C5A7FC /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -128,6 +138,8 @@
 				5F090DFF1DCBA66700F4B07E /* Info.plist */,
 				5F090E0E1DCC4EB500F4B07E /* Constant.swift */,
 				5F090E161DCCDA6C00F4B07E /* Default-568h@2x.png */,
+				5FC1CC2A1DCF3CFA00C5A7FC /* DataService.swift */,
+				5FC1CC2E1DD4376E00C5A7FC /* Hashable.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -283,12 +295,16 @@
 				5F090E0C1DCC4E1700F4B07E /* DesignHeader.swift in Sources */,
 				5F090DF61DCBA66700F4B07E /* MainVC.swift in Sources */,
 				5F090E131DCC9A5300F4B07E /* DesignField.swift in Sources */,
+				5FC1CC2D1DCF77F900C5A7FC /* Post.swift in Sources */,
 				5F090E111DCC571600F4B07E /* DesignButtonF.swift in Sources */,
 				5F8653151DCE25090027FB3E /* DesignImage.swift in Sources */,
+				5FC1CC2B1DCF3CFA00C5A7FC /* DataService.swift in Sources */,
 				5F8653131DCDCEC40027FB3E /* FeedVC.swift in Sources */,
 				5F090DF41DCBA66700F4B07E /* AppDelegate.swift in Sources */,
 				5F090E0F1DCC4EB500F4B07E /* Constant.swift in Sources */,
+				5FC1CC2F1DD4376E00C5A7FC /* Hashable.swift in Sources */,
 				5F090E151DCC9E0700F4B07E /* DesignButtonS.swift in Sources */,
+				5FC1CC291DCE68F800C5A7FC /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

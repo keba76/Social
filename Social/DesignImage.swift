@@ -9,14 +9,24 @@
 import UIKit
 
 class DesignImage: UIImageView {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor
-        layer.shadowOpacity = 0.8
-        layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        layer.shadowRadius = 5.0
-        layer.cornerRadius = 2.0
+    
+    override func layoutSubviews() {
+        
+        
+        
+        layer.cornerRadius = 3.0
+        self.clipsToBounds = true
+        
+        let borderView = UIView()
+        borderView.frame = CGRect(origin: self.frame.origin, size: self.bounds.size)
+        
+        superview?.addSubview(borderView)
+        borderView.layer.cornerRadius = 3.0
+        borderView.layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor
+        borderView.layer.shadowOpacity = 0.8
+        borderView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        borderView.layer.shadowRadius = 5.0
+        borderView.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        superview?.bringSubview(toFront: self)
     }
-
 }

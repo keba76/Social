@@ -21,14 +21,12 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Load")
-        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("Apear")
+
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             performSegue(withIdentifier: "goToFeed", sender: nil)
         }
@@ -58,7 +56,7 @@ class MainVC: UIViewController {
             } else {
                 print("HARMAN: Successully authenticated with FireBase")
                 if let uid = result?.uid {
-                self.comleteSignIn(id: uid)
+                    self.comleteSignIn(id: uid, userData: ["provider" : credential.provider])
                 }
             }
         })
@@ -69,7 +67,7 @@ class MainVC: UIViewController {
                 if error == nil {
                     print("HARMAN: Email user authenticated with FireBase")
                     if let uid = user?.uid {
-                        self.comleteSignIn(id: uid)
+                        self.comleteSignIn(id: uid, userData: ["provider" : (user?.providerID)!])
                     }
                     
                 } else {
@@ -79,7 +77,7 @@ class MainVC: UIViewController {
                         } else {
                             print("HARMAN: Successully authenticated with FireBase")
                             if let uid = user?.uid {
-                                self.comleteSignIn(id: uid)
+                                self.comleteSignIn(id: uid, userData: ["provider" : (user?.providerID)!])
                             }
                         }
                     })
@@ -88,7 +86,10 @@ class MainVC: UIViewController {
         }
     }
     
-    func comleteSignIn(id: String) {
+    func comleteSignIn(id: String, userData: Dictionary<String, String>) {
+        
+        DataService.ds.createFirebaseDBUsers(uid: id, userData: userData)
+        
         let keychaunResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Data saved to keychain \(keychaunResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)
