@@ -42,7 +42,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
                         if LIKES {
-                            self.posts.append(post)
+                            self.posts.insert(post, at: 0)
                         }
                         // use class Hashable for remove dublicate in posts array.
                         let wrappers = self.posts.map { (p) -> HashableWrapper<Post> in
@@ -52,13 +52,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                                 return obj.likes
                             })
                         }
-                        let s = Set(wrappers)
-                        let objects = s.map { (w) -> Post in
+                        self.posts = wrappers.removeDuplicates().map { (w) -> Post in
                             return w.object
                         }
-                        self.posts = objects
-                        
-                        
                     }
                 }
             }
@@ -159,6 +155,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     
+}
+
+extension Array where Element: Hashable {
+    func removeDuplicates() -> [Element] {
+        var result = [Element]()
+        
+        for value in self {
+            if result.contains(value) == false {
+                result.insert(value, at: 0)
+            }
+        }
+        return result
+    }
 }
 
 
